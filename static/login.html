@@ -1,0 +1,95 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+    <meta name="author" content="Sprint-pay"/>
+    <meta name="description" content="Dna Comptable - Connexion"/>
+    <!-- For Windows Phone -->
+    <title> Dna - Comptable</title>
+    <!-- CORE CSS-->
+
+    <!-- style CSS -->
+    <link rel="stylesheet" href="/Market/public/css/custom.css" type="text/css" media="all">
+    <link href="/Market/public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Market/public/css/bootstrap-icons.css"/>
+	<link rel="shortcut icon" href="/Market/public/images/logo.png"/>
+	<link rel="stylesheet" type="text/css" href="/Market/public/css/fontsaps.css"/>
+</head> 
+<body>
+<div class="my-login-page">
+    <?php include 'header.html' ?>
+    
+    <section class="main-w3ls mt-5">
+    
+    <div class="bottom-grid">
+        <div class="logo-w3ls">
+            <h1 class="title-sign-message"> Portail Sécurisé</h1>
+
+			<div class="text-center descript-sign-message">
+				S’authentifier pour y acceder
+			</div>
+        </div>
+    </div>
+    <div class="content-w3ls">
+        <div class="text-center icon-w3ls">
+            <img src="/Market/public/images/logo-custom.png" alt="" style="height: 80px;">
+        </div>
+
+        <div class="content-bottom">
+            <form action="" method="post" class="my-login-validation">
+                
+                <div class="field-group">
+                    <span class="bi bi-person" aria-hidden="true"></span>
+                    <div class="wthree-field">
+                        <input name="__username" id="validationDefaultUsername" type="text" value="" placeholder="Username" required>
+                    </div>
+                </div>
+                <div class="field-group">
+                    <span class="bi bi-lock" aria-hidden="true"></span>
+                    <div class="wthree-field">
+                        <input name="__password" id="myInput" type="Password" placeholder="Password">
+                    </div>
+                </div>
+                <div class="wthree-field">
+                    <button type="submit" class="btn sign-btn">Se connecter</button>
+                </div>
+                
+                <ul class="list-login-bottom update-pass-message">
+                    <li class="">
+                        <a href="">Mot de passe oublié ?</a>
+                    </li>
+                    <li class="clearfix"></li>
+                </ul>
+                <ul class="list-login-bottom update-pass-message">
+                    <li class="">
+                        <a href="/Market/static/inscription.html">Inscription</a>
+                    </li>
+                    <li class="clearfix"></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+
+    <?php include 'footer.html' ?>
+    </section>
+
+    <script src="/Market/public/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $('form.my-login-validation').on('submit', function(){
+        if($('#validationDefaultUsername').val() == 'bureau')
+        {
+            document.location.href= '/Dnacomptable/dashboard/bureau/index.html';
+        }else if($('#validationDefaultUsername').val() == 'admin'){
+            document.location.href= '/Dnacomptable/dashboard/bureau/index.html';
+        }else{
+            alert('Echec ! Login invalide.')
+        }
+        return false;
+        });
+    </script>
+</div>
+</body>
+</html>

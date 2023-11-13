@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>DNA - Comptable</title>
+    <link rel="stylesheet" href="/Dnacomptable/public/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/Dnacomptable/public/css/custom.css"/>
+    <link rel="stylesheet" type="text/css" href="/Dnacomptable/public/css/fontsaps.css"/>
+	<link rel="stylesheet" type="text/css" href="/Dnacomptable/public/css/bootstrap-icons.css"/>
+    <link rel="shortcut icon" href="/Dnacomptable/public/images/logo.png"/>
+    <script src="/Dnacomptable/public/js/jquery.min.js"></script>
+    <script src="/Dnacomptable/public/js/bootstrap.bundle.min.js"></script>
+</head>
+<body style="background: #fff!important;">
+    <section class="top-nav">
+        <div class="container">
+            <div class="top-nav">
+                <div>
+                   <img src="/Dnacomptable/public/images/logo.png" alt="" style="height: 25px;"> Application Comptable dédiée aux Intermédiaires
+                </div>
+                <input id="menu-toggle" type="checkbox" />
+                <label class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                </label>
+                <ul class="menu__">
+                    <li><a href="">Lambda <img src="/Dnacomptable/public/images/icon-person.png" alt="" style="height: 25px;"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row bhoechie-tab-container">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3 col-2 bhoechie-tab-menu">
+                <?php include '../bureau/menuleft.html' ?>                           
+            </div>
+            <div class="col-lg-10 col-md-9 col-sm-9 col-xs-9 col-10 bhoechie-tab">
+                <!-- flight section -->
+                <div class="bhoechie-tab-content active" style="padding: 0px;">
+                  <div class="row">
+                        <div class="col-md-3">
+                            <div class="aside-left">
+                                <?php include 'itemparametres.html' ?> 
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="inner-content-dash">
+                                <h1 class="title-sign-message text-start" style="font-family: Ubuntu;">Compagnies d’assurance</h1>
+
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control">
+                                            <div class="input-group-append">
+                                              <button class="input-group-text" style="background: #fff; border-radius: 0px 5px 5px 0px;">
+                                                <span class="bi bi-search"></span>
+                                              </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 pt-1">
+                                        <a href=""><img src="/Dnacomptable/public/images/icon-refresh.png"></a>
+                                    </div>
+                                    <div class="col-md-4 offset-md-2">
+                                        <a href="#!" class="btn-update-content" data-toggle="modal" data-target="#newFile">Ajouter Campagnie(s) <span class="bi bi-plus-circle-dotted"></span></a>
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive-vertical shadow-z-1" style="box-shadow:0px 0px 2px rgba(0,0,0,0.0005);">
+                                    <table id="table" class="table table-hover table-mc-light-blue" style="margin: 0px 0px 15px 0px;">
+                                   <thead>
+                                   <tr>
+                                     <th>Numéro</th>
+                                     <th>campagnie</th>
+                                     <th>Retirer</th>
+                                   </tr>
+                                   </thead>
+                                   <tbody>
+              
+                                     <tr>
+                                       <td data-title="Numéro">1</td>
+                                       <td data-title="campagnie">Axa</td>
+                                       <td data-title="Retirer">
+                                        <a href=""><img src="/Dnacomptable/public/images/icon-trash.png"></a>
+                                       </td>
+                                     </tr>
+              
+                                     <tr>
+                                      <td data-title="Numéro">2</td>
+                                      <td data-title="campagnie">Assurance XYC</td>
+                                      <td data-title="Retirer">
+                                        <a href=""><img src="/Dnacomptable/public/images/icon-trash.png"></a>
+                                      </td>
+                                      
+                                    </tr>
+              
+                                    <tr>
+                                      <td data-title="Numéro">3</td>
+                                      <td data-title="campagnie">Royal Onyc</td>
+                                      <td data-title="Retirer">
+                                        <a href=""><img src="/Dnacomptable/public/images/icon-trash.png"></a>
+                                      </td>
+                                    </tr>
+              
+                                   </tbody>
+                                  </table>
+                                  </div>
+
+                            </div>
+                        </div>
+                  </div>
+                </div>
+            </div>
+            <?php include 'modalcampagnie.html' ?>
+      </div>
+      
+    </div>
+    <script type="text/javascript">
+        $(".list-group-item").eq(3).addClass('active');
+        $(".btn-menu-left").eq(1).addClass('active-itemm');
+
+        $('.btn-update-content').click(function(){
+            $('#newFile').modal('show');
+        })
+        $('.close').click(function(){
+            $('#newFile').modal('hide');
+        });
+    </script>
+</body>
+</html>

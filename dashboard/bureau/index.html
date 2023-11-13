@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>DNA - Comptable</title>
+    <link rel="stylesheet" href="/Dnacomptable/public/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/Dnacomptable/public/css/custom.css"/>
+    <link rel="stylesheet" type="text/css" href="/Dnacomptable/public/css/fontsaps.css"/>
+	<link rel="stylesheet" type="text/css" href="/Dnacomptable/public/css/bootstrap-icons.css"/>
+    <link rel="shortcut icon" href="/Dnacomptable/public/images/logo.png"/>
+    <script src="/Dnacomptable/public/js/jquery.min.js"></script>
+    <script src="/Dnacomptable/public/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body style="background: #fff!important;">
+    <section class="top-nav">
+        <div class="container">
+            <div class="top-nav">
+                <div>
+                   <img src="/Dnacomptable/public/images/logo.png" alt="" style="height: 25px;"> Application Comptable dédiée aux Intermédiaires
+                </div>
+                <input id="menu-toggle" type="checkbox"/>
+                <label class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                </label>
+                <ul class="menu__">
+                    <li><a href="">Lambda <img src="/Dnacomptable/public/images/icon-person.png" alt="" style="height: 25px;"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row bhoechie-tab-container">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3 col-2 bhoechie-tab-menu">
+                <?php include 'menuleft.html' ?>                    
+            </div>
+            <div class="col-lg-10 col-md-9 col-sm-9 col-xs-9 col-10 bhoechie-tab">
+                <!-- flight section -->
+                <div class="bhoechie-tab-content active">
+                    
+                  <div class="row mt-3">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <img src="/Dnacomptable/public/images/icon-dash-circle.png" alt="">
+                        </div>
+                        <h1 class="title-sign-message"> Accès Rapide aux fonctionnalités </h1>
+                    </div>
+                  </div>
+
+                  <div class="row mt-5">
+                        <div class="col-md-4">
+                            <a href="etatsimple.html" class="card-item-dash">
+                                <img src="/Dnacomptable/public/images/icon-dash-1.png" alt="">
+
+                                <div class="mt-3">
+                                    <h4 class="sub-title-card">Saisir des</h4>
+                                    <div>
+                                        <h2 class="title-card-item">États simples</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#!" class="card-item-dash">
+                                <img src="/Dnacomptable/public/images/icon-dash-2.png" alt="">
+
+                                <div class="mt-3">
+                                    <h4 class="sub-title-card">Générer des</h4>
+                                    <div>
+                                        <h2 class="title-card-item">États models</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#!" class="card-item-dash open-modal-alert">
+                                <img src="/Dnacomptable/public/images/icon-dash-3.png" alt="" style="margin-top: -10px;">
+
+                                <div class="mt-3">
+                                    <h4 class="sub-title-card">Saisir des</h4>
+                                    <div>
+                                        <h2 class="title-card-item">États financiers</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                  </div>
+
+                  <div class="row mt-4">
+                    <div class="col-md-4">
+                        <a href="#!" class="card-item-dash-v">
+                            <div class="row">
+                                <div class="col-7 text-left pt-2">
+                                    <h2 class="title-card-item">États simples</h2>
+                                    <div>
+                                        <h4 class="sub-title-card">Afficher & modifier</h4>
+                                    </div>
+                                </div>
+                                <div class="col-5 text-end">
+                                    <img src="/Dnacomptable/public/images/incon-dash-4.png" alt="" style="margin-top: -10px;">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#!" class="card-item-dash-v">
+                            <div class="row">
+                                <div class="col-7 text-left pt-2">
+                                    <h2 class="title-card-item">États models</h2>
+                                    <div>
+                                        <h4 class="sub-title-card">Afficher & modifier</h4>
+                                    </div>
+                                </div>
+                                <div class="col-5 text-end">
+                                    <img src="/Dnacomptable/public/images/icon-dash-5.png" alt="" style="margin-top: -10px;">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#!" class="card-item-dash-v">
+                            <div class="row">
+                                <div class="col-7 text-left pt-2">
+                                    <h2 class="title-card-item">États financiers</h2>
+                                    <div>
+                                        <h4 class="sub-title-card">Afficher & Extraire</h4>
+                                    </div>
+                                </div>
+                                <div class="col-5 text-end">
+                                    <img src="/Dnacomptable/public/images/icon-dash-6.png" alt="" style="margin-top: -10px;">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                  </div>
+
+                  <div class="row mt-4">
+                    <div class="col-md-4 offset-md-8">
+                        <a href="#!" class="card-item-dash-v">
+                            <div class="row">
+                                <div class="col-7 text-left pt-3">
+                                    <h2 class="title-card-item">Autres états</h2>
+                                </div>
+                                <div class="col-5 text-end">
+                                    <img src="/Dnacomptable/public/images/icon-dash-7.png" alt="" style="margin-top: -10px;">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+      </div>
+
+    </div>
+
+
+    <div class="modal fade" id="openModalFinance" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-zoom" role="document">
+            <div class="modal-content">
+                <div class="modal-header modaloc-header">
+                    <div></div>
+                    <button type="button" class="close " data-dismiss="modal" aria-label="Close" style="color: #333;">
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="upload-file-box" style="height: auto; margin: 0px;">
+                        <div class="text-center">
+                            <h1 class="title-sign-message">Evitez les doublons</h1>
+                        </div>
+                        
+                        <nav class="accordion7 arrows">
+                            <input type="radio" name="accordion" id="cb1" />
+                            <section class="box7">
+                                <label class="box-title" for="cb1">Readme</label>
+                                <label class="box-close" for="acc-close"></label>
+                                <div class="box-content">Click on an item to open. Click on its header or the list header to close.</div>
+                            </section>
+                            <input type="radio" name="accordion" id="cb2" />
+                            <section class="box7">
+                                <label class="box-title" for="cb2">Read me too</label>
+                                <label class="box-close" for="acc-close"></label>
+                                <div class="box-content">Add the class 'arrows' to nav.accordion to add dropdown arrows.</div>
+                            </section>
+                    
+                            <input type="radio" name="accordion" id="acc-close" />
+                        </nav>
+
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        $(".list-group-item").eq(0).addClass('active');
+
+        $(".open-modal-alert").click(function(){
+            $("#openModalFinance").modal('show');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>DNA - Comptable</title>
+    <link rel="stylesheet" href="/Dnacomptable/public/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="/Dnacomptable/public/css/custom.css"/>
+    <link rel="stylesheet" type="text/css" href="/Dnacomptable/public/css/fontsaps.css"/>
+	<link rel="stylesheet" type="text/css" href="/Dnacomptable/public/css/bootstrap-icons.css"/>
+    <link rel="shortcut icon" href="/Dnacomptable/public/images/logo.png"/>
+    <script src="/Dnacomptable/public/js/jquery.min.js"></script>
+    <script src="/Dnacomptable/public/js/bootstrap.bundle.min.js"></script>
+</head>
+<body style="background: #fff!important;">
+    <section class="top-nav">
+        <div class="container">
+            <div class="top-nav">
+                <div>
+                   <a href="/Dnacomptable/dashboard/bureau/index.html"><img src="/Dnacomptable/public/images/icon-fleche-l.png" alt=""></a> Etat simple - saisie 
+                </div>
+                <input id="menu-toggle" type="checkbox"/>
+                <label class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                </label>
+                <ul class="menu__">
+                    <li><a href="">Lambda <img src="/Dnacomptable/public/images/icon-person.png" alt="" style="height: 25px;"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="border" style="min-height: calc(100vh - 60px); background: #fff;">
+            <div class="row mt-3">
+                <div class="col-md-6 offset-md-3">
+                    <div class="text-center">
+                        <img src="/Dnacomptable/public/images/icon-dash-1.png" alt="">
+                    </div>
+                    <h4 class="mt-3 stepper-subtitle"> Etats Simples </h4>
+                    <h1 class="title-sign-message"> <span class="stepper-number">1</span> Choisir l’opération</h1>
+                </div>
+
+                <div class="col-md-6 offset-md-3 mt-3">
+                    <form action="">
+                        <label for="" class="sub-title-card">Numéro de police</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Numéro de police">
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="" class="sub-title-card">Choisir un bordereau</label>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="event-dna0" class="label-option">
+                              <input type="radio" name="one" checked="" class="event-dna0" value="0"> Emission
+                            </label>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="event-dna1" class="label-option">
+                              <input type="radio" name="one" id="event-dna1" value="1"> Annulation
+                            </label>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="event-dna2" class="label-option">
+                              <input type="radio" name="one" id="event-dna2" value="2"> Encaissement
+                            </label>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="event-dna3" class="label-option">
+                              <input type="radio" name="one" id="event-dna3" value="3"> Reversement
+                            </label>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="event-dna4" class="label-option">
+                              <input type="radio" name="one" id="event-dna4" value="4"> Arriérés
+                            </label>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="event-dna5" class="label-option">
+                              <input type="radio" name="one" id="event-dna5" value="5"> Sinistre
+                            </label>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="event-dna6" class="label-option">
+                              <input type="radio" name="one" id="event-dna6" value="6"> Recours
+                            </label>
+                        </div>
+
+
+                        <div class="row mt-5">
+                            <div class="col-6">
+                                <a href="" class="btn-messenger text-center" style="min-width: 100%;">
+                                    Quitter
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a href="#!" class="btn-update-content" data-toggle="modal" style="border-radius: 5px; line-height: 27px;">Continuer <span class="bi bi-chevron-compact-right"></span></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <?php include 'modaletatsimple.html' ?>
+    </div>
+    <script type="text/javascript">
+        $('.btn-update-content').click(function(){
+            var val = $('input[name="one"]:checked').val();
+            if(val == 0)
+            {
+                $('#newFile').modal('show');
+            }
+        })
+        $('.close').click(function(){
+            $('#newFile').modal('hide');
+        });
+    </script>
+</body>
+</html>

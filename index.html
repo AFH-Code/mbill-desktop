@@ -1,0 +1,66 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+    <meta name="author" content="Sprint-pay"/>
+    <meta name="description" content="Dna Comptable - Connexion"/>
+    <!-- For Windows Phone -->
+    <title> Dna - Comptable</title>
+    <!-- CORE CSS-->
+
+    <!-- style CSS -->
+    <link rel="stylesheet" href="/Market/public/css/custom.css" type="text/css" media="all">
+    <link href="/Market/public/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Market/public/css/bootstrap-icons.css"/>
+	<link rel="shortcut icon" href="/Market/public/images/logo.png"/>
+	<link rel="stylesheet" type="text/css" href="/Market/public/css/fontsaps.css"/>
+</head> 
+<body>
+<div class="my-login-page" style="width: 100%;">
+    <?php include 'static/header.html' ?>
+    
+    <section class="container mt-5">
+    
+        <div style="width: 100%; padding-top: 120px; text-align: center;">
+            <a href="">
+                <img src="/Market/public/images/illustration-app.png" alt="" style="height: 250px; max-width: 100%;">
+            </a>
+
+            <div class="row mt-5">
+                <div class="col-md-8 offset-md-2">
+                    <div class="mb-3">
+                        <h3>Bienvenue sur MBill <a href="/Market/static/login.html">.</a></h3>
+                        <h5>Importez le fichier d'initialisation de la base de données</h5>
+                    </div>
+                    <div class="input-group mb-3" style="border: 2px dashed #999; padding: 7px; border-radius: 7px;">
+                        <input type="file" class="form-control" id="inputGroupFile02" style="border: none;">
+                        <label class="input-group-text" for="inputGroupFile02">Parcourrir</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <?php include 'static/footer.html' ?>
+    </section>
+
+    <script src="/Market/public/js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $('form.my-login-validation').on('submit', function(){
+        if($('#validationDefaultUsername').val() == 'bureau')
+        {
+            document.location.href= '/Dnacomptable/dashboard/bureau/index.html';
+        }else if($('#validationDefaultUsername').val() == 'admin'){
+            document.location.href= '/Dnacomptable/dashboard/bureau/index.html';
+        }else{
+            alert('Echec ! Login invalide.')
+        }
+        return false;
+        });
+    </script>
+</div>
+</body>
+</html>
